@@ -129,7 +129,7 @@ router.delete("/:id", async (req, res) => {
       where: { id: req.params.id },
     });
     if (!deleteProduct) {
-      res.status(404).json({ message: "Invalid id" });
+      res.status(404).json({ message: "Invalid product id" });
       return;
     }
     res.status(200).json(deleteProduct);

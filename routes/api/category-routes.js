@@ -73,7 +73,7 @@ router.put("/:id", async (req, res) => {
       }
     );
     if (!updateCaegoryData) {
-      res.status(404).json({ message: "Invalid id" });
+      res.status(404).json({ message: "Invalid category id" });
       return;
     }
     res.status(200).json(updateCaegoryData);
@@ -91,7 +91,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!deleteCategoryData) {
-      res.status(404).json({ message: "Invalid id" });
+      res.status(404).json({ message: "Invalid category id" });
       return;
     }
     res.status(200).json(deleteCategoryData);

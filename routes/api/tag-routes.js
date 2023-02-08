@@ -24,7 +24,7 @@ router.get("/:id", async (req, res) => {
       include: [{ model: Product }],
     });
     if (!singleTagData) {
-      res.status(404).json({ message: "Invalid product id" });
+      res.status(404).json({ message: "Invalid tag id" });
       return;
     }
     res.status(200).json(singleTagData);
@@ -58,7 +58,7 @@ router.put("/:id", async (req, res) => {
       }
     );
     if (!updateTagData) {
-      res.status(404).json({ message: "Invalid id" });
+      res.status(404).json({ message: "Invalid tag id" });
       return;
     }
     res.status(200).json(updateTagData);
@@ -76,7 +76,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!deleteTagData) {
-      res.status(404).json({ message: "Invalid id" });
+      res.status(404).json({ message: "Invalid tag id" });
       return;
     }
     res.status(200).json(deleteTagData);
